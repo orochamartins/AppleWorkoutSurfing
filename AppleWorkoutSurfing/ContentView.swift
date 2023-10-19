@@ -9,18 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            NavigationLink(destination: SurfWorkoutDetailView()) {
+                VStack {
+                    Image(systemName: "figure.surfing")
+                        .imageScale(.large)
+                    Text("Surfing")
+                        .foregroundColor(.white)
+                }
+                .padding()
+            }
+            // Create Tabview
         }
-        .padding()
+        .accentColor(.green)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

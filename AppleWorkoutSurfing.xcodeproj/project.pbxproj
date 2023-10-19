@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6F90F42AE1152400734B20 /* CustomBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F90F32AE1152400734B20 /* CustomBackButtonView.swift */; };
 		7FBBFAF32AE10D4600555162 /* AppleWorkoutSurfingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */; };
 		7FBBFAF52AE10D4600555162 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF42AE10D4600555162 /* ContentView.swift */; };
 		7FBBFAF72AE10D4800555162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF62AE10D4800555162 /* Assets.xcassets */; };
 		7FBBFAFA2AE10D4800555162 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF92AE10D4800555162 /* Preview Assets.xcassets */; };
+		7FBBFB012AE110CF00555162 /* SurfWorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBFB002AE110CF00555162 /* SurfWorkoutDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F6F90F32AE1152400734B20 /* CustomBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButtonView.swift; sourceTree = "<group>"; };
 		7FBBFAEF2AE10D4600555162 /* AppleWorkoutSurfing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWorkoutSurfing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWorkoutSurfingApp.swift; sourceTree = "<group>"; };
 		7FBBFAF42AE10D4600555162 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FBBFAF62AE10D4800555162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FBBFAF92AE10D4800555162 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FBBFB002AE110CF00555162 /* SurfWorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfWorkoutDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */,
 				7FBBFAF42AE10D4600555162 /* ContentView.swift */,
+				7FBBFB002AE110CF00555162 /* SurfWorkoutDetailView.swift */,
+				7F6F90F32AE1152400734B20 /* CustomBackButtonView.swift */,
 				7FBBFAF62AE10D4800555162 /* Assets.xcassets */,
 				7FBBFAF82AE10D4800555162 /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6F90F42AE1152400734B20 /* CustomBackButtonView.swift in Sources */,
 				7FBBFAF52AE10D4600555162 /* ContentView.swift in Sources */,
+				7FBBFB012AE110CF00555162 /* SurfWorkoutDetailView.swift in Sources */,
 				7FBBFAF32AE10D4600555162 /* AppleWorkoutSurfingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
