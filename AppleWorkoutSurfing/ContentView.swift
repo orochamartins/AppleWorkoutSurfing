@@ -9,19 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            NavigationLink(destination: SurfWorkoutDetailView()) {
-                VStack {
-                    Image(systemName: "figure.surfing")
-                        .imageScale(.large)
-                    Text("Surfing")
-                        .foregroundColor(.white)
+        TabView {
+            SummaryView()
+                .tabItem {
+                    Label("Summary", systemImage: "trophy.fill")
                 }
-                .padding()
-            }
-            // Create Tabview
+            FitnessPlusView()
+                .tabItem {
+                    Label("Fitness+", systemImage: "figure.run.circle.fill")
+                }
+            SharingView()
+                .tabItem {
+                    Label("Sharing", systemImage: "person.2.fill")
+                }
         }
-        .accentColor(.green)
     }
 }
 

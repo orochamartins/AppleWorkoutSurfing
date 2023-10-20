@@ -15,9 +15,9 @@ struct CustomBackButtonView: View {
         Button(action: {
             self.presentationMode.wrappedValue.dismiss()
         }) {
-            HStack(spacing: 2) {
+            HStack(spacing: 4) {
                 Image(systemName: "chevron.backward")
-                    //.font(.title3)
+                    .fontWeight(.semibold)
                 Text("Workouts")
             }
         }

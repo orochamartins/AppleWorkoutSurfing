@@ -2,7 +2,7 @@
 //  SurfWorkoutDetailView.swift
 //  AppleWorkoutSurfing
 //
-//  Created by Renato Martins on 19/10/2023.
+//  Created by Renato Martins on 20/10/2023.
 //
 
 import SwiftUI
@@ -24,7 +24,6 @@ struct SurfWorkoutDetailView: View {
                     
                 } label: {
                     Image(systemName: "square.and.arrow.up")
-                        //.font(.title3)
                 }
             }
         }
@@ -36,7 +35,6 @@ struct SurfWorkoutDetailView_Previews: PreviewProvider {
         NavigationView{
             SurfWorkoutDetailView()
                 .preferredColorScheme(.dark)
-                .accentColor(.green)
         }
     }
 }
