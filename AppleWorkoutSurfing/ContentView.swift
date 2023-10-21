@@ -9,31 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     
-    enum Tab {
-        case summary, fitness, sharing
+    @State private var showChild = false
+    @State private var selectedTab = 0 {
+        didSet {
+            if oldValue == selectedTab && selectedTab == 0 {
+                showChild.toggle()
+            }
+        }
     }
-    
-    @State private var selectedTab: Tab = .summary
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            SummaryView()
+            SummaryView(showChild: $showChild)
                 .tabItem {
                     Label("Summary", systemImage: "trophy.fill")
                 }
-                .tag(Tab.summary)
+                .tag(0)
             
             FitnessPlusView()
                 .tabItem {
                     Label("Fitness+", systemImage: "figure.run.circle.fill")
                 }
-                .tag(Tab.fitness)
+                .tag(1)
             
             SharingView()
                 .tabItem {
                     Label("Sharing", systemImage: "person.2.fill")
                 }
-                .tag(Tab.sharing)
+                .tag(2)
         }
     }
 }

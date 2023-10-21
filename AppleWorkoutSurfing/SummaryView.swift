@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SummaryView: View {
     
+    @Binding var showChild: Bool
+    
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: SurfWorkoutDetailView()) {
+            NavigationLink(destination: SurfWorkoutDetailView(showChild: $showChild)) {
                 VStack {
                     Image(systemName: "figure.surfing")
                         .imageScale(.large)
@@ -26,8 +28,7 @@ struct SummaryView: View {
 
 struct SummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        SummaryView()
+        SummaryView(showChild: .constant(false))
             .preferredColorScheme(.dark)
-            .accentColor(.green)
     }
 }

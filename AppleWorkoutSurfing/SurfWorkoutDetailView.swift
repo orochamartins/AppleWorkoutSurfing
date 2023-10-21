@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SurfWorkoutDetailView: View {
+    
+    @Binding var showChild: Bool
+    @Environment(\.presentationMode) private var presentationMode
+    
     var body: some View {
         ScrollView{
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -27,13 +31,16 @@ struct SurfWorkoutDetailView: View {
                 }
             }
         }
+        .onChange(of: showChild) { _ in
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 
 struct SurfWorkoutDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            SurfWorkoutDetailView()
+            SurfWorkoutDetailView(showChild: .constant(false))
                 .preferredColorScheme(.dark)
         }
     }
