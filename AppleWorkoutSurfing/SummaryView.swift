@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SummaryView: View {
+    
     var body: some View {
         NavigationStack {
             NavigationLink(destination: SurfWorkoutDetailView()) {
