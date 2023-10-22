@@ -32,7 +32,9 @@ struct SurfWorkoutDetailView: View {
             }
         }
         .onChange(of: showChild) { _ in
-            presentationMode.wrappedValue.dismiss()
+            if presentationMode.wrappedValue.isPresented {
+                presentationMode.wrappedValue.dismiss()
+            }
         }
     }
 }

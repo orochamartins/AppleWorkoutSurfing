@@ -10,16 +10,21 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var showChild = false
-    @State private var selectedTab = 0 {
-        didSet {
-            if oldValue == selectedTab && selectedTab == 0 {
-                showChild.toggle()
+    @State private var selectedTab = 0
+    @State private var tappedTwice = false
+    
+    var handler: Binding<Int> { Binding(
+        get: { self.selectedTab },
+        set: {
+            if $0 == self.selectedTab {
+                tappedTwice = true
             }
+            self.selectedTab = $0
         }
-    }
+    )}
     
     var body: some View {
-        TabView(selection: $selectedTab) {
+        TabView(selection: handler) {
             SummaryView(showChild: $showChild)
                 .tabItem {
                     Label("Summary", systemImage: "trophy.fill")
@@ -37,6 +42,11 @@ struct ContentView: View {
                     Label("Sharing", systemImage: "person.2.fill")
                 }
                 .tag(2)
+        }
+        .onChange(of: tappedTwice) { tapped in
+            guard tapped else { return }
+            showChild.toggle()
+            tappedTwice = false
         }
     }
 }
