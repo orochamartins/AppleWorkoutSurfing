@@ -14,8 +14,10 @@ struct SurfWorkoutDetailView: View {
     
     var body: some View {
         ScrollView{
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            HeaderDetailView()
         }
+        .padding(.top)
+        .padding(.horizontal)
         .navigationTitle("Thu, Oct 19")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)

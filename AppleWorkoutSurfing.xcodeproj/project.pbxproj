@@ -11,6 +11,8 @@
 		7F7904102AE2FD70001BB865 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79040F2AE2FD70001BB865 /* SummaryView.swift */; };
 		7F7904122AE2FD88001BB865 /* FitnessPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7904112AE2FD88001BB865 /* FitnessPlusView.swift */; };
 		7F7904142AE2FD95001BB865 /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7904132AE2FD95001BB865 /* SharingView.swift */; };
+		7F7FEAE82AE654B300C9AE1C /* HeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FEAE72AE654B300C9AE1C /* HeaderDetailView.swift */; };
+		7F7FEAEA2AE65E7000C9AE1C /* MetricsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FEAE92AE65E7000C9AE1C /* MetricsDetailsView.swift */; };
 		7FBBFAF32AE10D4600555162 /* AppleWorkoutSurfingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */; };
 		7FBBFAF52AE10D4600555162 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF42AE10D4600555162 /* ContentView.swift */; };
 		7FBBFAF72AE10D4800555162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF62AE10D4800555162 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		7F79040F2AE2FD70001BB865 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		7F7904112AE2FD88001BB865 /* FitnessPlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPlusView.swift; sourceTree = "<group>"; };
 		7F7904132AE2FD95001BB865 /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
+		7F7FEAE72AE654B300C9AE1C /* HeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailView.swift; sourceTree = "<group>"; };
+		7F7FEAE92AE65E7000C9AE1C /* MetricsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsDetailsView.swift; sourceTree = "<group>"; };
 		7FBBFAEF2AE10D4600555162 /* AppleWorkoutSurfing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWorkoutSurfing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWorkoutSurfingApp.swift; sourceTree = "<group>"; };
 		7FBBFAF42AE10D4600555162 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 			children = (
 				7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */,
 				7FBBFAF42AE10D4600555162 /* ContentView.swift */,
+				7F7FEAE92AE65E7000C9AE1C /* MetricsDetailsView.swift */,
+				7F7FEAE72AE654B300C9AE1C /* HeaderDetailView.swift */,
 				7F79040F2AE2FD70001BB865 /* SummaryView.swift */,
 				7FC91ABF2AE30130003445EA /* SurfWorkoutDetailView.swift */,
 				7F7904112AE2FD88001BB865 /* FitnessPlusView.swift */,
@@ -152,9 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F7FEAE82AE654B300C9AE1C /* HeaderDetailView.swift in Sources */,
 				7F7904142AE2FD95001BB865 /* SharingView.swift in Sources */,
 				7F6F90F42AE1152400734B20 /* CustomBackButtonView.swift in Sources */,
 				7FBBFAF52AE10D4600555162 /* ContentView.swift in Sources */,
+				7F7FEAEA2AE65E7000C9AE1C /* MetricsDetailsView.swift in Sources */,
 				7FC91AC02AE30130003445EA /* SurfWorkoutDetailView.swift in Sources */,
 				7F7904102AE2FD70001BB865 /* SummaryView.swift in Sources */,
 				7FBBFAF32AE10D4600555162 /* AppleWorkoutSurfingApp.swift in Sources */,
