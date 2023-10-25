@@ -14,7 +14,10 @@ struct SurfWorkoutDetailView: View {
     
     var body: some View {
         ScrollView{
-            HeaderDetailView()
+            VStack(spacing: 32){
+                HeaderDetailView()
+                MetricsDetailsView()
+            }
         }
         .padding(.top)
         .padding(.horizontal)
