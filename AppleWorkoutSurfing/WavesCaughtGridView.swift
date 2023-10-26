@@ -22,6 +22,9 @@ struct WavesCaughtGridView: View {
                     .font(.title3)
             }
             
+            // Preciso de ter em atenção os detalhes em termos de cores e espaçamentos
+            // Ajustas na tabela das grids o divider e as cores custom azuis
+            // Pensar em como vou fazer o "Show More"
             
             VStack {
                 WavesCaughtItemView(waveNumber: "1", waveSeconds: "14sec", waveDistance: "104m", waveSpeed: "28km/h", isLast: false)
