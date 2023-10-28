@@ -15,15 +15,26 @@ struct MetricsDetailsView: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns, alignment: .leading, spacing: 28) {
-            MetricsItemView(label: "Workout Time", value: "2:04:46", metric: "", color: .yellow)
-            MetricsItemView(label: "Wave Count", value: "17", metric: "", color: .purple)
-            MetricsItemView(label: "Distance Surfed", value: "586", metric: "M", color: .cyan)
-            MetricsItemView(label: "Distance Paddled", value: "3.6", metric: "KM", color: .cyan)
-            MetricsItemView(label: "Longest Wave", value: "388", metric: "M", color: .cyan)
-            MetricsItemView(label: "Top Speed", value: "40.2", metric: "KM/H", color: .brown)
-            MetricsItemView(label: "Avg. Heart Rate", value: "91", metric: "BPM", color: .red)
-            MetricsItemView(label: "Total Calories", value: "356", metric: "CAL", color: .pink)
+        VStack(spacing: 14) {
+            LazyVGrid(columns: columns, alignment: .leading) {
+                MetricsItemView(label: "Workout Time", value: "2:04:46", metric: "", color: .yellow)
+                MetricsItemView(label: "Wave Count", value: "17", metric: "", color: Color("Lavender"))
+            }
+            Divider()
+            LazyVGrid(columns: columns, alignment: .leading) {
+                MetricsItemView(label: "Distance Surfed", value: "586", metric: "M", color: Color("Turquoise"))
+                MetricsItemView(label: "Distance Paddled", value: "3.6", metric: "KM", color: Color("Turquoise"))
+            }
+            Divider()
+            LazyVGrid(columns: columns, alignment: .leading) {
+                MetricsItemView(label: "Longest Wave", value: "388", metric: "M", color: Color("Turquoise"))
+                MetricsItemView(label: "Top Speed", value: "40.2", metric: "KM/H", color: .brown)
+            }
+            Divider()
+            LazyVGrid(columns: columns, alignment: .leading) {
+                MetricsItemView(label: "Avg. Heart Rate", value: "91", metric: "BPM", color: .red)
+                MetricsItemView(label: "Total Calories", value: "356", metric: "CAL", color: .pink)
+            }
         }
     }
 }

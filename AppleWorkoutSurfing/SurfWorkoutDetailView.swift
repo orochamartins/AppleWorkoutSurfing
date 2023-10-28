@@ -18,10 +18,10 @@ struct SurfWorkoutDetailView: View {
                 HeaderDetailView()
                 MetricsDetailsView()
                 WavesCaughtGridView()
-                    .padding(.top, 8)
+                    .padding(.top, 12)
             }
+            .padding(.top)
         }
-        .padding(.top)
         .padding(.horizontal)
         .navigationTitle("Thu, Oct 19")
         .navigationBarTitleDisplayMode(.inline)
@@ -43,6 +43,7 @@ struct SurfWorkoutDetailView: View {
                 presentationMode.wrappedValue.dismiss()
             }
         }
+        .scrollIndicators(.hidden)
     }
 }
 

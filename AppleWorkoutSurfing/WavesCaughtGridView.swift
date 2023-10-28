@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct WavesCaughtGridView: View {
+    
+    let columns = [
+        GridItem(.fixed(25)),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline) {
@@ -22,21 +30,30 @@ struct WavesCaughtGridView: View {
                     .font(.title3)
             }
             
-            // Preciso de ter em atenção os detalhes em termos de cores e espaçamentos
-            // Ajustas na tabela das grids o divider e as cores custom azuis
-            // Pensar em como vou fazer o "Show More"
-            
             VStack {
-                WavesCaughtItemView(waveNumber: "1", waveSeconds: "14sec", waveDistance: "104m", waveSpeed: "28km/h", isLast: false)
+                LazyVGrid(columns: columns, alignment: .leading) {
+                    Text("0")
+                        .foregroundColor(.clear)
+                    Text("Duration")
+                    Text("Distance")
+                    Text("Top Speed")
+                }
+                .foregroundColor(.secondary)
+                .font(.footnote)
                 
                 WavesCaughtItemView(waveNumber: "1", waveSeconds: "14sec", waveDistance: "104m", waveSpeed: "28km/h", isLast: false)
                 
-                WavesCaughtItemView(waveNumber: "1", waveSeconds: "14sec", waveDistance: "104m", waveSpeed: "28km/h", isLast: false)
+                WavesCaughtItemView(waveNumber: "2", waveSeconds: "8sec", waveDistance: "87m", waveSpeed: "23km/h", isLast: false)
                 
-                WavesCaughtItemView(waveNumber: "1", waveSeconds: "14sec", waveDistance: "104m", waveSpeed: "28km/h", isLast: true)
+                WavesCaughtItemView(waveNumber: "3", waveSeconds: "15sec", waveDistance: "101m", waveSpeed: "25km/h", isLast: false)
+                
+                WavesCaughtItemView(waveNumber: "4", waveSeconds: "4sec", waveDistance: "32m", waveSpeed: "42km/h", isLast: false)
+                
+                WavesCaughtItemView(waveNumber: "5", waveSeconds: "15sec", waveDistance: "101m", waveSpeed: "25km/h", isLast: true)
             }
-            .padding()
-            .background(.thinMaterial)
+            .padding([.horizontal, .bottom])
+            .padding(.top, 10)
+            .background(Color("CardBackground"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }

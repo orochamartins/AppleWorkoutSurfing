@@ -30,9 +30,9 @@ struct WavesCaughtItemView: View {
                 Text(waveSeconds)
                     .fontWeight(.medium)
                 Text(waveDistance)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("SkyBlue"))
                 Text(waveSpeed)
-                    .foregroundColor(.cyan)
+                    .foregroundColor(Color("Turquoise"))
             }
             if !isLast {
                 Divider()
