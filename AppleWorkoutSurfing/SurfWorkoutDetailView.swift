@@ -19,6 +19,7 @@ struct SurfWorkoutDetailView: View {
                 MetricsDetailsView()
                 WavesCaughtGridView()
                     .padding(.top, 12)
+                MapSectionView()
             }
             .padding(.top)
         }
