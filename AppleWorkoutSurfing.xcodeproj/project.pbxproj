@@ -14,6 +14,9 @@
 		7F7997CB2AEA4C29001FE9C4 /* WavesCaughtItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7997CA2AEA4C29001FE9C4 /* WavesCaughtItemView.swift */; };
 		7F7AFAB42AE8F42000043634 /* MetricsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AFAB32AE8F42000043634 /* MetricsItemView.swift */; };
 		7F7C0BAD2AEF9D1900F7B087 /* MapSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C0BAC2AEF9D1900F7B087 /* MapSectionView.swift */; };
+		7F7D60672AF391DB00A2F2AC /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D60662AF391DB00A2F2AC /* HeartRateView.swift */; };
+		7F7D60692AF39C7700A2F2AC /* HeartRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D60682AF39C7700A2F2AC /* HeartRateData.swift */; };
+		7F7D606B2AF39D9800A2F2AC /* ChartStrideBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D606A2AF39D9800A2F2AC /* ChartStrideBy.swift */; };
 		7F7FEAE82AE654B300C9AE1C /* HeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FEAE72AE654B300C9AE1C /* HeaderDetailView.swift */; };
 		7F7FEAEA2AE65E7000C9AE1C /* MetricsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FEAE92AE65E7000C9AE1C /* MetricsDetailsView.swift */; };
 		7FBBFAF32AE10D4600555162 /* AppleWorkoutSurfingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF22AE10D4600555162 /* AppleWorkoutSurfingApp.swift */; };
@@ -32,6 +35,9 @@
 		7F7997CA2AEA4C29001FE9C4 /* WavesCaughtItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesCaughtItemView.swift; sourceTree = "<group>"; };
 		7F7AFAB32AE8F42000043634 /* MetricsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsItemView.swift; sourceTree = "<group>"; };
 		7F7C0BAC2AEF9D1900F7B087 /* MapSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSectionView.swift; sourceTree = "<group>"; };
+		7F7D60662AF391DB00A2F2AC /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		7F7D60682AF39C7700A2F2AC /* HeartRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateData.swift; sourceTree = "<group>"; };
+		7F7D606A2AF39D9800A2F2AC /* ChartStrideBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartStrideBy.swift; sourceTree = "<group>"; };
 		7F7FEAE72AE654B300C9AE1C /* HeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailView.swift; sourceTree = "<group>"; };
 		7F7FEAE92AE65E7000C9AE1C /* MetricsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsDetailsView.swift; sourceTree = "<group>"; };
 		7FBBFAEF2AE10D4600555162 /* AppleWorkoutSurfing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWorkoutSurfing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,9 @@
 				7F7997CA2AEA4C29001FE9C4 /* WavesCaughtItemView.swift */,
 				7FD31BB42AEA522000511253 /* WavesCaughtGridView.swift */,
 				7F7C0BAC2AEF9D1900F7B087 /* MapSectionView.swift */,
+				7F7D60662AF391DB00A2F2AC /* HeartRateView.swift */,
+				7F7D606A2AF39D9800A2F2AC /* ChartStrideBy.swift */,
+				7F7D60682AF39C7700A2F2AC /* HeartRateData.swift */,
 				7F7904112AE2FD88001BB865 /* FitnessPlusView.swift */,
 				7F7904132AE2FD95001BB865 /* SharingView.swift */,
 				7F6F90F32AE1152400734B20 /* CustomBackButtonView.swift */,
@@ -176,9 +185,12 @@
 				7FD31BB52AEA522000511253 /* WavesCaughtGridView.swift in Sources */,
 				7F7C0BAD2AEF9D1900F7B087 /* MapSectionView.swift in Sources */,
 				7F7997CB2AEA4C29001FE9C4 /* WavesCaughtItemView.swift in Sources */,
+				7F7D606B2AF39D9800A2F2AC /* ChartStrideBy.swift in Sources */,
 				7FBBFAF52AE10D4600555162 /* ContentView.swift in Sources */,
 				7F7FEAEA2AE65E7000C9AE1C /* MetricsDetailsView.swift in Sources */,
 				7F7AFAB42AE8F42000043634 /* MetricsItemView.swift in Sources */,
+				7F7D60672AF391DB00A2F2AC /* HeartRateView.swift in Sources */,
+				7F7D60692AF39C7700A2F2AC /* HeartRateData.swift in Sources */,
 				7FC91AC02AE30130003445EA /* SurfWorkoutDetailView.swift in Sources */,
 				7F7904102AE2FD70001BB865 /* SummaryView.swift in Sources */,
 				7FBBFAF32AE10D4600555162 /* AppleWorkoutSurfingApp.swift in Sources */,
