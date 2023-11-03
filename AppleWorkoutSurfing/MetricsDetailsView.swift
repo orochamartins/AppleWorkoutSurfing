@@ -17,7 +17,7 @@ struct MetricsDetailsView: View {
     var body: some View {
         VStack(spacing: 14) {
             LazyVGrid(columns: columns, alignment: .leading) {
-                MetricsItemView(label: "Workout Time", value: "2:04:46", metric: "", color: .yellow)
+                MetricsItemView(label: "Workout Time", value: "1:31:46", metric: "", color: .yellow)
                 MetricsItemView(label: "Wave Count", value: "17", metric: "", color: Color("Lavender"))
             }
             Divider()

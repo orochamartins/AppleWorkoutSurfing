@@ -24,6 +24,7 @@
 		7FBBFAF72AE10D4800555162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF62AE10D4800555162 /* Assets.xcassets */; };
 		7FBBFAFA2AE10D4800555162 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBFAF92AE10D4800555162 /* Preview Assets.xcassets */; };
 		7FC91AC02AE30130003445EA /* SurfWorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC91ABF2AE30130003445EA /* SurfWorkoutDetailView.swift */; };
+		7FCF4F622AF4ED2C00F793D6 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF4F612AF4ED2C00F793D6 /* ChartData.swift */; };
 		7FD31BB52AEA522000511253 /* WavesCaughtGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD31BB42AEA522000511253 /* WavesCaughtGridView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		7FBBFAF62AE10D4800555162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FBBFAF92AE10D4800555162 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FC91ABF2AE30130003445EA /* SurfWorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfWorkoutDetailView.swift; sourceTree = "<group>"; };
+		7FCF4F612AF4ED2C00F793D6 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		7FD31BB42AEA522000511253 /* WavesCaughtGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesCaughtGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				7F7D60662AF391DB00A2F2AC /* HeartRateView.swift */,
 				7F7D606A2AF39D9800A2F2AC /* ChartStrideBy.swift */,
 				7F7D60682AF39C7700A2F2AC /* HeartRateData.swift */,
+				7FCF4F612AF4ED2C00F793D6 /* ChartData.swift */,
 				7F7904112AE2FD88001BB865 /* FitnessPlusView.swift */,
 				7F7904132AE2FD95001BB865 /* SharingView.swift */,
 				7F6F90F32AE1152400734B20 /* CustomBackButtonView.swift */,
@@ -181,6 +184,7 @@
 			files = (
 				7F7FEAE82AE654B300C9AE1C /* HeaderDetailView.swift in Sources */,
 				7F7904142AE2FD95001BB865 /* SharingView.swift in Sources */,
+				7FCF4F622AF4ED2C00F793D6 /* ChartData.swift in Sources */,
 				7F6F90F42AE1152400734B20 /* CustomBackButtonView.swift in Sources */,
 				7FD31BB52AEA522000511253 /* WavesCaughtGridView.swift in Sources */,
 				7F7C0BAD2AEF9D1900F7B087 /* MapSectionView.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-func date(year: Int, month: Int, day: Int = 1, hour: Int = 0, minutes: Int = 0, seconds: Int = 0) -> Date {
+func date(year: Int = 2023, month: Int = 11, day: Int = 3, hour: Int, minutes: Int, seconds: Int) -> Date {
     Calendar.current.date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minutes, second: seconds)) ?? Date()
 }
 
@@ -18,46 +18,36 @@ enum Constants {
 
 enum HeartRateData {
     /// Heart Rate for the last week
-    static let lastWeek = [
-        (weekday: date(year: 2022, month: 7, day: 1), dailyAverage: 127, dailyMin: 95, dailyMax: 194),
-
-        (weekday: date(year: 2022, month: 7, day: 2), dailyAverage: 131, dailyMin: 101, dailyMax: 184),
-
-        (weekday: date(year: 2022, month: 7, day: 3), dailyAverage: 136, dailyMin: 96, dailyMax: 193),
-
-        (weekday: date(year: 2022, month: 7, day: 4), dailyAverage: 134, dailyMin: 104, dailyMax: 202),
-
-        (weekday: date(year: 2022, month: 7, day: 5), dailyAverage: 129, dailyMin: 90, dailyMax: 95),
-
-        (weekday: date(year: 2022, month: 7, day: 6), dailyAverage: 136, dailyMin: 96, dailyMax: 203),
-
-        (weekday: date(year: 2022, month: 7, day: 7), dailyAverage: 134, dailyMin: 98, dailyMax: 200)
+    static let thisWorkout = [
+        (stretch: date(hour: 7, minutes: 43, seconds: 20), stretchAverage: 127, stretchMin: 95, stretchMax: 194),
+        
+        (stretch: date(hour: 9, minutes: 14, seconds: 26), stretchAverage: 127, stretchMin: 95, stretchMax: 194)
     ]
 
     // MARK: - Static constants
 
     static let minBPM: Int = {
-        Self.lastWeek.min { a, b in
-            a.dailyMin < b.dailyMin
-        }?.dailyMin ?? 0
+        Self.thisWorkout.min { a, b in
+            a.stretchMin < b.stretchMin
+        }?.stretchMin ?? 0
     }()
 
     static let maxBPM: Int = {
-        Self.lastWeek.max { a, b in
-            a.dailyMax < b.dailyMax
-        }?.dailyMax ?? 0
+        Self.thisWorkout.max { a, b in
+            a.stretchMax < b.stretchMax
+        }?.stretchMax ?? 0
     }()
 
     static let earliestDate: Date = {
-        Self.lastWeek.min { a, b in
-            a.weekday < b.weekday
-        }?.weekday ?? Date()
+        Self.thisWorkout.min { a, b in
+            a.stretch < b.stretch
+        }?.stretch ?? Date()
     }()
 
     static let latestDate: Date = {
-        Self.lastWeek.max { a, b in
-            a.weekday < b.weekday
-        }?.weekday ?? Date()
+        Self.thisWorkout.max { a, b in
+            a.stretch < b.stretch
+        }?.stretch ?? Date()
     }()
 
     static let dateInterval: DateInterval = {

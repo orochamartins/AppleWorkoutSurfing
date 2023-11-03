@@ -10,10 +10,7 @@ import Charts
 
 struct HeartRateView: View {
     
-    @State var data = HeartRateData.lastWeek
-    
-    @State private var barWidth = 10.0
-    @State private var chartColor: Color = .red
+    @State var data = ChartData.generateStretchData(startDate: date(hour: 7, minutes: 43, seconds: 20), endDate: date(hour: 9, minutes: 14, seconds: 26), count: 90)
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -33,20 +30,20 @@ struct HeartRateView: View {
                 Chart(data, id: \.weekday) { dataPoint in
                     Plot {
                         BarMark(
-                            x: .value("Day", dataPoint.weekday, unit: .day),
+                            x: .value("Workout Time", dataPoint.weekday, unit: .day),
                             yStart: .value("BPM Min", dataPoint.dailyMin),
                             yEnd: .value("BPM Max", dataPoint.dailyMax),
-                            width: .fixed(barWidth)
+                            width: .fixed(5)
                         )
                         .clipShape(Capsule())
-                        .foregroundStyle(chartColor)
+                        .foregroundStyle(.red)
                     }
                 }
                 .chartXAxis {
                     AxisMarks(values: .stride(by: ChartStrideBy.day.time)) { _ in
                         AxisTick()
                         AxisGridLine()
-                        AxisValueLabel(format: .dateTime.weekday(.abbreviated))
+                        //AxisValueLabel(format: .dateTime.weekday(.abbreviated))
                     }
                 }
                 .chartYAxis(.automatic)
