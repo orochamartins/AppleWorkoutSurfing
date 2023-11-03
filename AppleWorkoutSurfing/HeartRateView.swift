@@ -10,7 +10,7 @@ import Charts
 
 struct HeartRateView: View {
     
-    @State var data = ChartData.generateStretchData(startDate: date(hour: 7, minutes: 43, seconds: 20), endDate: date(hour: 9, minutes: 14, seconds: 26), count: 90)
+    let data = HeartChartData.bpmData
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -27,28 +27,33 @@ struct HeartRateView: View {
             }
             
             VStack {
-                Chart(data, id: \.weekday) { dataPoint in
-                    Plot {
+                Chart {
+                    ForEach(data) { stretch in
                         BarMark(
-                            x: .value("Workout Time", dataPoint.weekday, unit: .day),
-                            yStart: .value("BPM Min", dataPoint.dailyMin),
-                            yEnd: .value("BPM Max", dataPoint.dailyMax),
-                            width: .fixed(5)
+                            x: .value("Workout Time", stretch.date),
+                            yStart: .value("BPM Min", stretch.minBPM),
+                            yEnd: .value("BPM Max", stretch.maxBPM),
+                            width: .fixed(3)
                         )
                         .clipShape(Capsule())
                         .foregroundStyle(.red)
                     }
                 }
                 .chartXAxis {
-                    AxisMarks(values: .stride(by: ChartStrideBy.day.time)) { _ in
-                        AxisTick()
-                        AxisGridLine()
-                        //AxisValueLabel(format: .dateTime.weekday(.abbreviated))
+                    AxisMarks(values: [data[0].date, data[30].date, data[60].date]) { _ in
+                        AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5))
+                        AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)).minute())
+                            .foregroundStyle(.red)
+
                     }
                 }
-                .chartYAxis(.automatic)
-                .chartXAxis(.automatic)
-                .frame(height: Constants.detailChartHeight)
+                .chartYAxis {
+                    AxisMarks(values: [HeartChartData.lowestBPM - 5]) { _ in
+                        AxisGridLine()
+                    }
+                }
+                .chartYScale(domain: [HeartChartData.lowestBPM - 5, HeartChartData.highestBPM + 5])
+                .frame(height: 80)
             }
             .padding(20)
             .background(Color("CardBackground"))

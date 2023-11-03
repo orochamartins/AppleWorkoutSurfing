@@ -17,9 +17,10 @@ struct SurfWorkoutDetailView: View {
             VStack(spacing: 32){
                 HeaderDetailView()
                 MetricsDetailsView()
-                WavesCaughtGridView()
-                    .padding(.top, 12)
                 MapSectionView()
+                    .padding(.top, 10)
+                WavesCaughtGridView()
+                HeartRateView()
             }
             .padding(.top)
         }
