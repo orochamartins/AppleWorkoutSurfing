@@ -17,9 +17,9 @@ struct HeartChartData: Identifiable {
     }
     
     static let bpmData: [HeartChartData] = [
-        HeartChartData(date: Date.from(hour: 7, minute: 43, second: 20), maxBPM: 70, minBPM: 68),
-        HeartChartData(date: Date.from(hour: 7, minute: 44, second: 20), maxBPM: 71, minBPM: 68),
-        HeartChartData(date: Date.from(hour: 7, minute: 45, second: 20), maxBPM: 74, minBPM: 70),
+        HeartChartData(date: Date.from(hour: 7, minute: 43, second: 20), maxBPM: 70, minBPM: 70),
+        HeartChartData(date: Date.from(hour: 7, minute: 44, second: 20), maxBPM: 71, minBPM: 71),
+        HeartChartData(date: Date.from(hour: 7, minute: 45, second: 20), maxBPM: 67, minBPM: 66),
         HeartChartData(date: Date.from(hour: 7, minute: 46, second: 20), maxBPM: 74, minBPM: 70),
         HeartChartData(date: Date.from(hour: 7, minute: 47, second: 20), maxBPM: 74, minBPM: 70),
         HeartChartData(date: Date.from(hour: 7, minute: 48, second: 20), maxBPM: 75, minBPM: 71),
@@ -108,7 +108,7 @@ struct HeartChartData: Identifiable {
         HeartChartData(date: Date.from(hour: 9, minute: 11, second: 20), maxBPM: 75, minBPM: 70),
         HeartChartData(date: Date.from(hour: 9, minute: 12, second: 20), maxBPM: 75, minBPM: 72),
         HeartChartData(date: Date.from(hour: 9, minute: 13, second: 20), maxBPM: 70, minBPM: 68),
-        HeartChartData(date: Date.from(hour: 9, minute: 14, second: 26), maxBPM: 68, minBPM: 66)
+        HeartChartData(date: Date.from(hour: 9, minute: 14, second: 26), maxBPM: 68, minBPM: 68)
     ]
     
     static let lowestBPM: Int = {

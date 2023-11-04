@@ -12,6 +12,12 @@ struct HeartRateView: View {
     
     let data = HeartChartData.bpmData
     
+    private var dataAVG: Int {
+        var total = data.map { $0.avgBPM }.reduce(0) { $0 + $1 }
+        var length = data.count
+        return total / length
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline) {
@@ -26,7 +32,7 @@ struct HeartRateView: View {
                     .font(.title3)
             }
             
-            VStack {
+            VStack(alignment: .leading, spacing: 2) {
                 Chart {
                     ForEach(data) { stretch in
                         BarMark(
@@ -42,9 +48,27 @@ struct HeartRateView: View {
                 .chartXAxis {
                     AxisMarks(values: [data[0].date, data[30].date, data[60].date]) { _ in
                         AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5))
-                        AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)).minute())
-                            .foregroundStyle(.red)
+                        AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)).minute(), horizontalSpacing: 0)
+                            .font(.body)
+                            .foregroundStyle(.gray)
 
+                    }
+                    
+                    AxisMarks(values: [data[91].date]) { _ in
+                        AxisValueLabel(anchor: .topTrailing, horizontalSpacing: 0){
+                            Text("\(HeartChartData.lowestBPM)")
+                        }
+                        .font(.body)
+                        .foregroundStyle(.white)
+                    }
+                    
+                    
+                    AxisMarks(position: .top, values: [data[91].date]) { _ in
+                        AxisValueLabel(anchor: .bottomTrailing, horizontalSpacing: 0){
+                            Text("\(HeartChartData.highestBPM)")
+                        }
+                        .font(.body)
+                        .foregroundStyle(.white)
                     }
                 }
                 .chartYAxis {
@@ -53,9 +77,15 @@ struct HeartRateView: View {
                     }
                 }
                 .chartYScale(domain: [HeartChartData.lowestBPM - 5, HeartChartData.highestBPM + 5])
-                .frame(height: 80)
+                .frame(height: 110)
+                
+                Text("\(dataAVG) BPM AVG")
+                    .fontDesign(.rounded)
+                    .font(.body)
+                    .foregroundColor(.red)
             }
-            .padding(20)
+            .padding(.horizontal)
+            .padding(.vertical, 14)
             .background(Color("CardBackground"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
