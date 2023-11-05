@@ -21,6 +21,7 @@ struct SurfWorkoutDetailView: View {
                     .padding(.top, 10)
                 WavesCaughtGridView()
                 HeartRateView()
+                    .padding(.bottom, 16)
             }
             .padding(.top)
         }

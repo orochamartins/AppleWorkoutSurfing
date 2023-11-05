@@ -13,8 +13,8 @@ struct HeartRateView: View {
     let data = HeartChartData.bpmData
     
     private var dataAVG: Int {
-        var total = data.map { $0.avgBPM }.reduce(0) { $0 + $1 }
-        var length = data.count
+        let total = data.map { $0.avgBPM }.reduce(0) { $0 + $1 }
+        let length = data.count
         return total / length
     }
     
